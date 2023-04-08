@@ -1,0 +1,37 @@
+    <h1>
+  Payment Results
+</h1>
+
+<dl>
+  <dt>
+    APR
+  </dt>
+  <dd>
+    <%= number_to_percentage(@num_apr, precision: 4)%>
+  </dd>
+
+  <dt>
+    Number of years
+  </dt>
+  <dd>
+    <%= @num_years %>
+  </dd>
+
+  <dt>
+    Principal
+  </dt>
+  <dd>
+    <%= number_to_currency(@num_pv) %>
+  </dd>
+
+  <dt>
+    Payment
+  </dt>
+  <dd>
+    <%= number_to_currency(@num_payment) %>
+  </dd>
+</dl>
+
+<a href="/payment/new">
+  Calculate another payment
+</a>
